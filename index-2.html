@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  
+  <title>Virtual Folio - Portfolio HTML5 Template</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="was2.png">
+  
+  <link rel="stylesheet" type="text/css" href="themify-icons.css">
+  
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  
+  <link rel="stylesheet" type="text/css" href="owl.carousel.css">
+  
+  <link rel="stylesheet" type="text/css" href="perfect-scrollbar.css">
+  
+  <link rel="stylesheet" type="text/css" href="nice-select.css">
+
+  <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="virtual.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="minibar.virtual.css">
+ 
+</head>
+<body class="theme-red">
+  
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <iconify-icon icon="mdi:arrow-up-bold"></iconify-icon>
+  </div>
+  
+  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><iconify-icon icon="material-symbols:settings-outline"></iconify-icon></button>
+      </div> 
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+      <select class="custom-select d-block my-2" id="change-page">
+        <option value="">Choose Page</option>
+        <option value="index">Topbar</option>
+        <option value="index-2">Minibar</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="topbar-nav fixed-top">
+    <div class="brand">
+      <img src="favicon.ico" alt="" width="30" height="30">
+    </div>
+    <h3 class="ml-1">Virtual Portfolio</h3>
+    <button class="btn-fab toggle-menu mr-3"><iconify-icon icon="ic:baseline-menu"></iconify-icon></button>
+  </div>
+  
+  <!-- Minibar -->
+  <div class="minibar">
+    <div class="header">
+      <div class="brand">
+        
+      </div>
+    </div>
+    <div class="content">
+      <ul class="main-menu">
+        <li class="menu-item active">
+          <a href="#home" class="menu-link">
+            <span class="icon"><iconify-icon icon="carbon:home"></iconify-icon></span>
+            <span class="caption">Home</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#about" class="menu-link">
+            <span class="icon "><iconify-icon icon="simple-line-icons:user"></iconify-icon></span>
+            <span class="caption">About</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#services" class="menu-link">
+            <span class="icon"><iconify-icon icon="ph:file-light"></iconify-icon></span>
+            <span class="caption">Service</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#portfolio" class="menu-link">
+            <span class="icon"><iconify-icon icon="ph:briefcase-light"></iconify-icon></span>
+            <span class="caption">Portfolio</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#contact" class="menu-link">
+            <span class="icon"><iconify-icon icon="carbon:location"></iconify-icon></span>
+            <span class="caption">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="vg-main-wrapper">
+    <div class="vg-page page-home" id="home" style="background-image: url(bg_image_2.jpg);">
+      <div class="caption wow zoomInUp">
+        <h1 class="fw-normal">Welcome</h1>
+        <h2 class="fw-medium fg-theme">I'm Wassim Hbibi</h2>
+        <p class="tagline">Software Developer</p>
+      </div>
+    </div>
+    
+    <!-- Page About -->
+    <div class="vg-page page-about" id="about">
+      <!-- Profile -->
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-place wow zoomIn">
+              <img src="was2.png" alt="Photo Profile">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="caption wow fadeInRight">
+              <h1 class="fw-light">Wassim Hbibi</h1>
+              <h5 class="fg-theme mb-3">Softwere Developer</h5>
+              <p class="text-muted"> I am currently a 2nd year SINT(Information System and New Technologies) student at the Faculty of Economics and Management of Sfax (FSEGS) - University of Sfax (Tunisia).</p>
+              <ul class="theme-list">
+                <li><b>From:</b> Sfax, Tunisia</li>
+                <li><b>Lives In:</b> Sfax, Tunisia</li>
+                <li><b>Age:</b> 24</li>
+                <li><b>Gender:</b> Male</li>
+              </ul>
+              <button class="btn btn-theme btn-rounded" id="downloadButton">Download CV</button>
+              <script>
+                function downloadCV() {
+                    // Path to your local CV file relative to your HTML file
+                    var cvFilePath = 'cv en wassim hbibi.pdf'; // Adjust the filename accordingly
+                
+                    // Create an anchor element
+                    var a = document.createElement('a');
+                    
+                    // Set the href attribute to the file path
+                    a.href = cvFilePath;
+                
+                    // Set the download attribute to force download
+                    a.download = 'cv_en_wassimhbibi.pdf'; // Change 'cv_en_wassimhbibi.pdf' to your desired file name
+                
+                    // Append the anchor element to the body
+                    document.body.appendChild(a);
+                
+                    // Click the anchor element programmatically to trigger download
+                    a.click();
+                
+                    // Remove the anchor element from the body
+                    document.body.removeChild(a);
+                }
+                
+                // Add event listener to the download button, calling the downloadCV function
+                document.getElementById('downloadButton').addEventListener('click', downloadCV);
+                </script>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End profile -->
+      <!-- Skills -->
+      <div class="container py-5">
+        <h1 class="text-center fw-normal wow fadeIn">My Skills</h1>
+        <div class="row py-3">
+          <div class="col-md-6">
+            <div class="px-lg-3">
+              <h4 class="wow fadeInUp">Coding skills</h4>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">HTML + CSS</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+                </div>
+              </div>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">TypeScript</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+                </div>
+              </div>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">JavaScript</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 78%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">78%</div>
+                </div>
+              </div>
+          
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">C#</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">86%</div>
+                </div>
+              </div>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">C</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+                </div>
+              </div>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">Java</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">85%</div>
+                </div>
+              </div>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">Phyton</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">86%</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="row py-3"></div>
+              <div class="px-lg-3">
+                <h4 class="wow fadeInUp">Other Skills</h4>
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">GitHub</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 52%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">52%</div>
+                  </div>
+                </div>
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">PostMan</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 63%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">63%</div>
+                  </div>
+                </div>
+                </div>
+          </div>
+          <div class="col-md-6">
+            <div class="px-lg-3">
+              <h4 class="wow fadeInUp">FramWork Skills</h4>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">Angular</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">83%</div>
+                </div>
+              </div>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">.Net FramWork</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 77%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">77%</div>
+                </div>
+              </div>
+         
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">Tailwindcss</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 89%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">89%</div>
+                </div>
+              </div>
+              <div class="progress-wrapper wow fadeInUp">
+                <span class="caption">Bootstrap</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">88%</div>
+                </div>
+              </div>
+            </div>
+            <div class="row py-3"></div>
+              <div class="px-lg-3">
+                <h4 class="wow fadeInUp">DataBase Skills</h4>
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">SQL Server</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">85%</div>
+                  </div>
+                </div>
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">My SQL</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 77%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">77%</div>
+                  </div>
+                </div>
+           
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">Oracle</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+        </div>
+      </div> <!-- End skills -->
+      <!-- Resume -->
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-6 wow fadeInRight">
+            <h2 class="fw-normal">Education</h2>
+            <ul class="timeline mt-4 pr-md-5">
+              <li>
+                <div class="title">2022-Current</div>
+                <div class="details">
+                  <h5>Machine Learning And Data Mining </h5>
+                  <small class="fg-theme">Faculty of Economics and Management of Sfax </small>
+                  <p>Master degree in machine learning and data mining </p>
+                </div>
+              </li>
+              <li>
+                <div class="title">2019-2022</div>
+                <div class="details">
+                  <h5>Management IT</h5>
+                  <small class="fg-theme">Higher Institute of Business Administration of Sfax</small>
+                  <p>Graduate in Business Computing with specialization in e-commerce</p>
+                </div>
+              </li>
+              <li>
+                <div class="title">2019</div>
+                <div class="details">
+                  <h5>Bachelor's Degree</h5>
+                  <small class="fg-theme">High School Khalij Sfax</small>
+                  <p>Bachelor in Economics and Management</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
+            <h2 class="fw-normal">Experience</h2>
+            <ul class="timeline mt-4 pr-md-5">
+              
+              <li>
+                <div class="title">01/02/2023 - 01/08/2023</div>
+                <div class="details">
+                  <h5>E-learning Web Application Development Project</h5>
+                  <small class="fg-theme">Internship Company: MSK-TEC Sousse </small>
+                  <p> Creation of an e-learning web application offering an ideal environment for online learning, with personalized dashboards for administrators, teachers and students.</p>
+                  <p>Technology used:  Asp.net Framwork  Api Web ,SQL Server, Angular, Tailwindcss</p>
+                </div>
+              </li>
+              <li>
+                <div class="title">01/02/2022 - 16/05/2022</div>
+                <div class="details">
+                  <h5>Mdx Query Generator</h5>
+                  <small class="fg-theme">Internship Company: Acteol Sfax</small>
+                  <p>Creating a web application to automatically generate web dashboards from an OLAP cube.</p>
+                  <p>Technology used :  Angular , Asp.net Framwork  Api Web ,SQL Server ,Bootstrap</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Page Service -->
+    <div class="vg-page page-service" id="services">
+      <h1 class="text-center wow fadeInUp">Services</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 wow fadeInUp">
+            <div class="card card-body">
+              <div class="iconic">
+ <iconify-icon icon="bi:pc-display-horizontal"></iconify-icon>
+              </div>
+              <div class="caption">
+                <h4 class="fg-theme">Web Development</h4>
+                <p>There are many variations of passages of Lorem Ipsum available</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow fadeInUp">
+            <div class="card card-body">
+              <div class="iconic">
+                <iconify-icon icon="carbon:machine-learning-model"></iconify-icon>
+              </div>
+              <div class="caption">
+                <h4 class="fg-theme">IA Developer</h4>
+                <p>I have substantial experience in several AI concepts, including machine and deep learning</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow fadeInUp">
+            <div class="card card-body">
+              <div class="iconic">
+                <iconify-icon icon="game-icons:teacher"></iconify-icon>
+              </div>
+              <div class="caption">
+                <h4 class="fg-theme">IT instructor</h4>
+                <p>As an instructor, I possess the capability to analyze individuals across various IT disciplines</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End page services -->
+    
+    <!-- Testimonials -->
+    <div class="vg-page p-0" id="testimonial">
+      <div class="owl-carousel testi-carousel" style="background-image: url(photo-2.jpg);">
+        <div class="item">
+          <p>I love the sleek design of the website! It's visually appealing and easy to navigate</p>
+          <span class="iconic">
+            <iconify-icon icon="mingcute:quote-left-line"></iconify-icon>
+          </span>
+          <h4>Marwa</h4>
+        </div>
+        <div class="item">
+          <p>The responsive design works really well across different screen sizes. Great job on ensuring compatibility</p>
+          <span class="iconic">
+            <iconify-icon icon="mingcute:quote-left-line"></iconify-icon>
+          </span>
+          <h4>Ali</h4>
+        </div>
+        <div class="item">
+          <p>Thank you for being responsive and accommodating throughout the development process. Your professionalism made working together a pleasure</p>
+          <span class="iconic">
+            <iconify-icon icon="mingcute:quote-left-line"></iconify-icon>
+          </span>
+          <h4>Nedia</h4>
+        </div>
+      </div>
+    </div> <!-- End testimonial -->
+    
+    <!-- Portfolio page -->
+    <div class="vg-page page-portfolio" id="portfolio">
+      <div class="container">
+        <div class="text-center wow fadeInUp">
+          <div class="badge badge-subhead">Portfolio</div>
+        </div>
+        <h1 class="text-center fw-normal wow fadeInUp">See my work</h1>
+        <div class="filterable-button py-3 wow fadeInUp" data-toggle="selected">
+          <button class="btn btn-theme-outline selected" data-filter="*">All</button>
+          <button class="btn btn-theme-outline" data-filter=".web">Web</button>
+          <button class="btn btn-theme-outline" data-filter=".Desktop">Desktop</button>
+          <button class="btn btn-theme-outline" data-filter=".ml">Machine Learning</button>
+          <button class="btn btn-theme-outline" data-filter=".Game">Games</button>
+        </div>
+  
+        <div class="gridder my-3">
+          <div class="grid-item web wow zoomIn">
+            <div class="img-place" data-src="eco.png" data-fancybox data-caption="<h5 class='fg-theme'>E-Commerce-Website</h5> <p>Web</p>">
+              <img src="eco.png" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">E-Commerce-Website</h5>
+                <p>Enhancing Online Shopping: A Seamless and Secure E-Commerce Experience</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item web  wow zoomIn">
+            <div class="img-place" data-src="sitepayy.png" data-fancybox data-caption="<h5 class='fg-theme'>Platform for Game Sales</h5> <p>Web</p>">
+              <img src="sitepayy.png" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">Platform for Game Sales</h5>
+                <p>Wassim Store: Your Interactive Destination for Featured Games</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item web  wow zoomIn">
+            <div class="img-place" data-src="unnamed.png" data-fancybox data-caption="<h5 class='fg-theme'>MDX Query Builder</h5> <p>Web</p>">
+              <img src="unnamed.png" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">
+                  MDX Query Builder </h5>
+                <p>Automated Web Dashboard Generation from OLAP Cubes</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item web  wow zoomIn">
+            <div class="img-place" data-src="eee.png" data-fancybox data-caption="<h5 class='fg-theme'>E-Learning Web Application</h5> <p>Web</p>">
+              <img src="eee.png" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">E-Learning Web Application</h5>
+                <p>"E-Learning Web Application: Tailored Learning Environments for Administrators, Teachers, and Students</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item Desktop  wow zoomIn">
+            <div class="img-place" data-src="java.png" data-fancybox data-caption="<h5 class='fg-theme'>Java Application</h5> <p>Desktop</p>">
+              <img src="java.png" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">Java Application: Advanced Client Management</h5>
+                <p>Integrated Java Application: Client Data Management with Secure Authentication</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item ml wow zoomIn">
+            <div class="img-place" data-src="p.png" data-fancybox data-caption="<h5 class='fg-theme'>Classifying Email Spam</h5> <p>ML</p>">
+              <img src="p.png" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">Application for Classifying Email Spam</h5>
+                <p>Our application is designed to check whether an email message is spam or not</p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item ml wow zoomIn">
+            <div class="img-place" data-src="knn.png" data-fancybox data-caption="<h5 class='fg-theme'>Bank Marketing Prediction</h5> <p>ML</p>">
+              <img src="knn.png" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">Bank Marketing Prediction Application</h5>
+                <p>Predicting Term Deposit Subscriptions to Enhance Banking Marketing Strategies, Improving Campaign Efficiency</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid-item Game wow zoomIn">
+            <div class="img-place" data-src="fl.jpg" data-fancybox data-caption="<h5 class='fg-theme'>Flappy Bird Game</h5> <p>Game</p>">
+              <img src="fl.jpg" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">Flappy Bird Game</h5>
+                <p>Python-Powered Flappy Bird: A Classic and Addictive Game</p>
+              </div>
+            </div>
+          </div>
+  
+        </div> <!-- End gridder -->
+        <div class="text-center wow fadeInUp">
+      
+        </div>
+      </div>
+    </div> <!-- End Portfolio page -->
+    
+    
+    <!-- Page Contact -->
+ <!-- End page contact -->
+    
+ <!-- Footer -->
+ <div class="vg-footer" id="contact">
+  <div class="vg-page page-contact" >
+    <h1 class="text-center fg-white wow fadeInUp">Contact</h1>
+  </div>
+
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 py-3">
+        <div class="footer-info">
+        </div>
+      </div>
+      <div class="col-lg-4 py-3">
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Follow me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href="https://www.linkedin.com/in/wassim-hbibi-881705226/">LinkedIn</a></li>
+              <li><a href="https://github.com/wassimhbibi">GitHub</a></li>
+              <li><a href="https://www.facebook.com/wassim.hbibii.566">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 py-3">
+      <div class="col-md-6 col-lg-3 py-3">
+        <div class="float-lg-right">
+          <p>Contact me</p>
+          <hr class="divider">
+          <ul class="list-unstyled">
+            <span class="fg-envelope"></span><li>habibiwassim37@gmail.com</li>
+            <li>+2 1 6 53 592 755</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+  
+      <div class="col-12">
+        <p class="text-center mb-0 mt-4">Copyright &copy;<script>document.write(new Date().getFullYear());</script> . All right reserved <b class="fg-theme">By Wassim Hbibi</b></p>
+      </div>
+    </div>
+  </div>
+ <!-- End footer -->
+  </div> <!-- End main wrapper -->
+  
+
+  <script src="jquery-3.5.1.min.js"></script>
+  
+  <script src="bootstrap.bundle.min.js"></script>
+  
+  <script src="owl.carousel.min.js"></script>
+  
+  <script src="perfect-scrollbar.js"></script>
+  
+  <script src="isotope.pkgd.min.js"></script>
+  
+  <script src="jquery.nice-select.min.js"></script>
+  
+  <script src="jquery.fancybox.min.js"></script>
+
+  <script src="wow.min.js"></script>
+
+  <script src="jquery.animateNumber.min.js"></script>
+
+  <script src="jquery.waypoints.min.js"></script>
+  
+  <script src="google-maps.js"></script>
+  
+  <script src="minibar-virtual.js"></script>
+
+  
+
+</body>
+</html>
+
