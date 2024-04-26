@@ -141,7 +141,191 @@ a:hover, a:active {
     border-radius: 6px;
     box-shadow: 0 0 0 2px #fff, 0 3px 9px rgba(0,0,0,0.3);
 }
+.contact-two {
+    position: relative;
+  
+    padding: 120px 0;
+  }
+  
+  @media (max-width: 767px) {
+    .contact-two {
+      padding: 80px 0;
+    }
+  }
+  
+  .contact-two .container {
+    max-width: 800px;
+   
+  }
+  
+  .contact-two .contact-one__left {
+    padding: 0;
+  }
+  
+  .contact-two .contact-one__input-box {
+    margin-bottom: 20px;
+  }
+  .contact-one__form-box {
+    position: relative;
+    display: block;
+    padding: 0;
+  }
+  .contact .info-box {
+  
+    padding: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.072);
+  }
+  
+  .contact .info-box i {
+    font-size: 24px;
 
+    border-radius: 50%;
+    padding: 14px;
+    float: left;
+
+  }
+  
+  .contact .info-box h3 {
+    font-size: 20px;
+
+    font-weight: 700;
+    margin: 10px 0 8px 68px;
+  }
+  
+  .contact .info-box p {
+    padding: 0;
+    color: #fff;
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0 0 0 68px;
+  }
+  
+  .contact .info-box .social-links {
+    margin: 5px 0 0 68px;
+    display: flex;
+  }
+  
+  .contact .info-box .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    color: #fff;
+    line-height: 1;
+    margin-right: 12px;
+    transition: 0.3s;
+  }
+  
+  .contact .info-box .social-links a:hover {
+    color: #18d26e;
+  }
+  
+  .contact .php-email-form {
+    padding: 30px;
+ 
+  }
+  
+  .contact .php-email-form .error-message {
+    display: none;
+  
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .contact .php-email-form .error-message br+br {
+    margin-top: 25px;
+  }
+  
+  .contact .php-email-form .sent-message {
+    display: none;
+
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .contact .php-email-form .loading {
+    display: none;
+
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    animation: animate-loading 1s linear infinite;
+  }
+  
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+  
+    border: 0;
+    transition: 0.3s;
+    color: #fff;
+  }
+  
+  .contact .php-email-form input:focus,
+  .contact .php-email-form textarea:focus {
+ 
+  }
+  
+  .contact .php-email-form input::-moz-placeholder,
+  .contact .php-email-form textarea::-moz-placeholder {
+
+    opacity: 1;
+  }
+  
+  .contact .php-email-form input::placeholder,
+  .contact .php-email-form textarea::placeholder {
+   
+    opacity: 1;
+  }
+  
+  .contact .php-email-form input {
+    padding: 10px 15px;
+  }
+  
+  .contact .php-email-form textarea {
+    padding: 12px 15px;
+  }
+  
+  .contact .php-email-form button[type=button] {
+
+    border: 0;
+    padding: 10px 30px;
+width: 200px;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+  
+  .contact .php-email-form button[type=submit]:hover {
+    background: #15bb}
+  .contact-two .contact-one__input-box textarea,
+  .contact-two .contact-one__input-box input[type="text"],
+  .contact-two .contact-one__input-box input[type="email"] {
+    background-color: var(--ogency-black2);
+  }
+  
+  .contact-two .contact-one__input-box .bootstrap-select > .dropdown-toggle {
+    background-color: var(--ogency-black2) !important;
+  }
+  
+  .contact-two .contact-one__form .row {
+    --bs-gutter-x: 20px;
+  }
+  
 .btn-theme:hover, .btn-theme:active {
     background-color: #808080;
     color: #fff;
@@ -963,7 +1147,9 @@ a:hover, a:active {
     padding: 8px 0;
     text-align: center;
 }
-
+h1{
+    margin-top: 30px;
+}
 .og-fullimg img {
 	max-height: 100%;
     max-width: 100%;
@@ -1056,6 +1242,7 @@ a:hover, a:active {
     float: left;
     margin: 16px 0;
     padding: 0 16px;
+    height: 300px; /* Adjust the height as needed */
 }
 
 .grid-item,
@@ -1073,7 +1260,7 @@ a:hover, a:active {
     margin: 0 auto;
     width: 100%;
     max-width: 350px;
-    height: 100%;
+    height: 100%; /* Set the height to 100% to fill the container */
     border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
@@ -1100,15 +1287,13 @@ a:hover, a:active {
 }
 
 @media (min-width: 768px) {
-    .gridder .grid-item,
-    .gridder .grid-sizer {
+    .grid-item {
         width: 50%;
     }
 }
 
 @media (min-width: 992px) {
-    .gridder .grid-item,
-    .gridder .grid-sizer {
+    .grid-item {
         width: 33.33333%;
     }
 }
