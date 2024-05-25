@@ -133,18 +133,55 @@
               <img src="was2.png" alt="Photo Profile">
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="caption wow fadeInRight">
-              <h1 class="fw-light">Wassim Hbibi</h1>
-              <h5 class="fg-theme mb-3">Softwere Developer</h5>
-              <p class="text-muted"> I am currently a 2nd year SINT(Information System and New Technologies) student at the Faculty of Economics and Management of Sfax (FSEGS) - University of Sfax (Tunisia).</p>
-              <ul class="theme-list">
-                <li><b>From:</b> Sfax, Tunisia</li>
-                <li><b>Lives In:</b> Sfax, Tunisia</li>
-                <li><b>Age:</b> 25</li>
-                <li><b>Gender:</b> Male</li>
-              </ul>
-              <button class="btn btn-theme btn-rounded" id="downloadButton">Download CV</button>
+  <script>
+    function calculateAge(birthdate) {
+      // Parse the birthdate string
+      let birthDate = new Date(birthdate);
+     
+      // Get today's date
+      let today = new Date();
+
+      // Calculate the age
+      let age = today.getFullYear() - birthDate.getFullYear();
+      let monthDifference = today.getMonth() - birthDate.getMonth();
+      let dayDifference = today.getDate() - birthDate.getDate();
+
+      // Adjust age if today's date hasn't reached the birthdate yet in the current year
+      if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+        age--;
+      }
+
+      return age;
+    }
+
+    // Ensure the DOM is fully loaded before running the script
+    document.addEventListener('DOMContentLoaded', (event) => {
+      console.log("DOM fully loaded and parsed");
+
+      // Calculate the age and update the span element
+      let myBirthdate = '1999-05-20';
+      let ageSpan = document.getElementById('age');
+
+      // Check if the element is found
+      if (ageSpan) {
+        ageSpan.innerText = calculateAge(myBirthdate);
+        console.log("Age calculated and inserted:", ageSpan.innerText);
+      } else {
+        console.log("Element with id 'age' not found");
+      }
+    });
+  </script>
+        <div class="col-lg-6 offset-lg-1 wow fadeInRight">
+          <h1 class="fw-light">Wassim Hbibi</h1>
+          <h5 class="fg-theme mb-3">Softwere Developer</h5>
+          <p class="text-muted"> I am currently a 2nd year SINT(Information System and New Technologies) student at the Faculty of Economics and Management of Sfax (FSEGS) - University of Sfax (Tunisia).</p>
+          <ul class="theme-list">
+            <li><b>From:</b> Sfax, Tunisia</li>
+            <li><b>Lives In:</b> Sfax, Tunisia</li>
+            <li ><b >Age:</b><span id="age"></span></li>
+            <li><b>Gender:</b> Male</li>
+          </ul>
+          <button class="btn btn-theme-outline" id="downloadButton">Download CV</button>
               <script>
                 function downloadCV() {
                     // Path to your local CV file relative to your HTML file
